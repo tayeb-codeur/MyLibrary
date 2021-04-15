@@ -1,8 +1,10 @@
-package be.icc.poo.data;
+package Metier;
 
-import java.awt.print.Book;
+import DaoLibrary.Book;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import DaoLibrary.Person;
 
 public class MyLibrary {
 
@@ -50,24 +52,27 @@ public class MyLibrary {
 
 	public int printBooks() {
 		int cpt = 0;
-		Iterator<Book> it = this.getBooks().iterator();
-		while (it.hasNext())
-			;
-		Book b = it.next();
 
-		System.out.println(++cpt + ":" + b.getTitle() + " - " + b.getAuthor());
+		Iterator<Book> it = this.getBooks().iterator();
+
+		while (it.hasNext()) {
+			Book b = it.next();
+			System.out.println(++cpt + ": " + b.getTitle() + " - " + b.getAuthor());
+		}
 		return cpt;
 	}
 
-	public int printMembers() {
-		Iterator<Person> it = this.getPeople().iterator();
+		public int printMembers() {
+			int cpt = 0;
 
-		while (it.hasNext())
-			;
-		Person p = it.next();
-		System.out.println(++ cpt + ":" + p.getName());
-		return cpt;
-	} 
-	
-}
+			Iterator<Person> itp = this.getPeople().iterator();
 
+			while (itp.hasNext()) {
+				Person p = itp.next();
+
+				System.out.println(++cpt + ": " + p.getName());
+			}
+			return cpt;
+		}
+
+	}

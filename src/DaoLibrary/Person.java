@@ -1,6 +1,5 @@
-package be.icc.poo.data;
+package DaoLibrary;
 
-import java.awt.print.Book;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -10,7 +9,7 @@ public class Person {
 	private String name;
 	private byte maxBooks;
 	private LocalDate registrationDate;
-	private ArrayList<Book>books;
+	private ArrayList<Book> books;
 	
 	public Person(UUID id, String name) {
 		this.id = id;
@@ -19,22 +18,23 @@ public class Person {
 		this.registrationDate = LocalDate.now();
 		this.books = new ArrayList<Book>();
 	}
-
-	public void setId(UUID id) {
-		this.id = id;
-	}
+	
+	
 	public UUID getId() {
 		return id;
 	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
+
 
 	public String getName() {
 		return name;
 	}
-	
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
 	public void setMaxBooks(byte maxBooks) {
 		this.maxBooks = maxBooks;
 	}
@@ -48,11 +48,12 @@ public class Person {
 	}
 
 	public LocalDate getRegistrationDate() {
+		
 		return registrationDate;
 	}
 
 	
-	public ArrayList<Books> getBooks() {
+	public ArrayList<Book> getBooks() {
 		return books;
 	}
 
@@ -63,7 +64,7 @@ public class Person {
 				+ (books !=null ? books.subList(0, Math.min(books.size(), maxLen)) : null) + "]";
 	}
 
-	public void setBooks(ArrayList<Books> books) {
+	public void setBooks(ArrayList<Book> books) {
 		this.books = books;
 	}
 

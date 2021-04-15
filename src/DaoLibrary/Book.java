@@ -17,7 +17,6 @@ public class Book {
 	
 	
 	public Book(String title, String author, int totalPage, int loanPeriod, int rentalPrice, String language) {
-		super();
 		this.title = title;
 		this.author = author;
 		this.totalPage = totalPage;
@@ -127,8 +126,8 @@ public class Book {
 				+ getLoanPeriod() + ", getRentalPrice()=" + getRentalPrice() + ", getLanguage()=" + getLanguage() + "]";
 	}
 	 
-	public static void  main (String []args) {
+	/*public static void  main (String []args) {
 		Book book = new Book();
 		System.out.println(book.toString());
-	}
+	}*/
 }

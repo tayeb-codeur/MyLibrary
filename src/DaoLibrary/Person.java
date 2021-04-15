@@ -11,6 +11,8 @@ public class Person {
 	private LocalDate registrationDate;
 	private ArrayList<Book> books;
 	
+	public Person(){}
+	
 	public Person(UUID id, String name) {
 		this.id = id;
 		this.name =name;
@@ -68,9 +70,4 @@ public class Person {
 		this.books = books;
 	}
 
-
-	public static void main(String[] args) {
-		
-		
-		}
 }
